@@ -1,0 +1,146 @@
+.about-section {
+  position: relative;
+  max-width: calc(100vw - 220px);
+  margin-left: 220px;
+  padding: 60px 40px;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #000;  /* BLACK TEXT */
+  background-color: #e0e5ec;
+  min-height: 100vh;
+  overflow: hidden;
+  z-index: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Remove dark overlay image background */
+.about-section::before {
+  content: none;
+}
+
+/* Title Styling */
+.section-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #1e90ff;
+  border-bottom: 4px solid #1e90ff;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+/* Content Wrapper */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+  gap: 30px;
+}
+
+/* Paragraph Card */
+.about-text p {
+  background-color: #e0e5ec;
+  border-radius: 12px;
+  padding: 20px 25px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #000;
+  box-shadow: 8px 8px 16px #bec4d0,
+              -8px -8px 16px #ffffff;
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Card Section Shared */
+.education-section,
+.certification-section {
+  background-color: #e0e5ec;
+  border-radius: 12px;
+  padding: 25px 30px;
+  width: 100%;
+  max-width: 900px;
+  box-sizing: border-box;
+  box-shadow: 8px 8px 16px #bec4d0,
+              -8px -8px 16px #ffffff;
+}
+
+.education-title,
+.certification-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #1e90ff;
+  border-bottom: 2px solid #1e90ff;
+  padding-bottom: 8px;
+  text-align: center;
+}
+
+/* List Styles */
+.education-list,
+.certification-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.education-item,
+.certification-item {
+  text-align: left;
+}
+
+.education-item h4,
+.certification-item h4 {
+  font-size: 1.25rem;
+  margin: 0 0 6px 0;
+  color: #000;
+}
+
+.education-item p,
+.certification-item p {
+  font-size: 1rem;
+  margin: 0;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-section {
+    margin-left: 0;
+    max-width: 100vw;
+    padding: 40px 20px;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .education-title,
+  .certification-title {
+    font-size: 1.6rem;
+  }
+
+  .education-item h4,
+  .certification-item h4 {
+    font-size: 1.1rem;
+  }
+
+  .education-item p,
+  .certification-item p {
+    font-size: 0.95rem;
+  }
+}

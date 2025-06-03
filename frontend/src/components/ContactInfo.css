@@ -1,0 +1,91 @@
+.contact-info-section {
+  position: relative;
+  width: calc(100vw - 220px);
+  height: 100vh;
+  margin-left: 220px;
+  padding: 40px;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e0e5ec;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Remove background overlay */
+.contact-info-section::before {
+  content: none;
+}
+
+/* Title styling */
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #1e90ff;
+  border-bottom: 4px solid #1e90ff;
+  padding-bottom: 8px;
+  text-shadow: 1px 1px 0 #ffffff;
+}
+
+.section-title .highlight {
+  color: #f94144;
+}
+
+/* Cards container */
+.info-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+/* Individual card with neumorphism */
+.info-card {
+  background-color: #e0e5ec;
+  padding: 25px 20px;
+  width: 260px;
+  border-radius: 16px;
+  box-shadow: 8px 8px 16px #bec4d0,
+              -8px -8px 16px #ffffff;
+  transition: all 0.3s ease;
+  color: #000;
+  text-align: center;
+  cursor: pointer;
+}
+
+.info-card:hover {
+  transform: translateY(-6px);
+  box-shadow: inset 4px 4px 10px #c1c6d4,
+              inset -4px -4px 10px #ffffff;
+}
+
+/* Icon inside card */
+.info-icon {
+  width: 50px;
+  margin-bottom: 15px;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.15));
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .contact-info-section {
+    margin-left: 0;
+    width: 100vw;
+    height: auto;
+    padding: 30px 20px;
+  }
+
+  .info-card {
+    width: 90%;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+}

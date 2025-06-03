@@ -1,0 +1,150 @@
+/* Reset & Base */
+body, html, #root {
+  margin: 0;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #e0e5ec;
+  color: #000;  /* BLACK TEXT */
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  background: #e0e5ec;
+  width: 280px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: inset 8px 8px 16px #bec4d0,
+              inset -8px -8px 16px #ffffff;
+  border-radius: 20px;
+  margin: 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #1e90ff;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.sidebar nav a {
+  color: #000;  /* BLACK TEXT */
+  text-decoration: none;
+  padding: 12px 20px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  border-radius: 12px;
+  box-shadow: 6px 6px 12px #bec4d0,
+              -6px -6px 12px #ffffff;
+  transition: all 0.2s ease;
+}
+
+.sidebar nav a.active,
+.sidebar nav a:hover {
+  background-color: #1e90ff;
+  color: white;
+  box-shadow: inset 4px 4px 8px #186cd3,
+              inset -4px -4px 8px #249cff;
+}
+
+/* Main content area */
+.main-content {
+  flex-grow: 1;
+  min-width: 0;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+/* Reusable card style */
+.card {
+  background: #e0e5ec;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 8px 8px 16px #bec4d0,
+              -8px -8px 16px #ffffff;
+  max-width: 1000px;
+  margin: auto;
+  color: #000;  /* BLACK TEXT */
+}
+
+/* Typography */
+.card h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1e90ff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.card p, .card ul, .card label {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #000;  /* BLACK TEXT */
+}
+
+/* Form Styling */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 12px;
+  background: #e0e5ec;
+  box-shadow: inset 6px 6px 12px #bec4d0,
+              inset -6px -6px 12px #ffffff;
+  resize: vertical;
+  outline: none;
+  color: #000;  /* BLACK TEXT */
+}
+
+.contact-form button {
+  background-color: #1e90ff;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 4px 4px 10px #186cd3,
+              -4px -4px 10px #249cff;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #0f6cd9;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin: 10px;
+    border-radius: 12px;
+    align-items: center;
+  }
+
+  .main-content {
+    padding: 20px;
+  }
+}
